@@ -9,7 +9,12 @@
 \maketitle
 \section{Les récurrences}
 \noindent EXERCICES\newline\newline
-Exercice 5\\
+\textbf{Chapitre 0, exercice 3 du cours d'algèbre de Roger Godement}\\
+Montrer à l'aide d'un exemple que la relation $(\forall x) (\exists y) R \Rightarrow (\exists y) (\forall x) R$. Soit $R$ la relation \textit{ils se reproduisent} et $x$ : \textit{tous les animaux} et $y$ : \textit{il existe un environnement naturel}.\\
+Alors le terme de droite dit que \textit{pour tous les animaux il existe un environnement naturel où ils peuvent se reproduire} 
+\\et le terme de droite \textit{il existe un environnement naturel où tous les animaux peuvent se reproduire}.
+Avec cette exemple on voit bien que l'implication n'est pas vraie alors que la prémisse est vraie. Supposons l'Afrique équatoriale, un endroit où la diversité biologique est grande, il est pourtant évident qu'un ours polaire ne peut pas s'y reproduire. \\
+\\\noindent Exercice 5\\
 A venn diagram with three overlapping circles is often used to illustrate the eight possible subsets associated with three given sets. 
 Can the sixteen possibilities that arise with four given sets be illustrated by four overlapping circles?\newline
 
@@ -109,5 +114,19 @@ Si $n+1 \bmod 5 = 3$ alors  $Q_{n+1} = \frac{\alpha+\beta+1}{\alpha}\times\frac{
 Si $n+1 \bmod 5 = 2$ alors  $Q_{n+1} = \frac{1+\beta}{\alpha}$\newline
 Si $n+1 \bmod 5 = 1$ alors  $Q_{n+1} = (1 + \alpha)\times\frac{\beta}{1+\alpha} = \beta$\newline\newline
 
-L'hypothèse est vérifiée dans tous les cas du rang n+1.
+L'hypothèse est vérifiée dans tous les cas du rang n+1.\\ \\
+\textbf{9} P(n) : $\chi_1\dots\chi_n \leq (\frac{\chi_1+\dots+\chi_n}{n})^n$ , if  $\chi_1,\dots, \chi_n \geq 0$ \\
+\textbf{question a}  Si on suppose que P(n) est vraie montrons que cela implique P(n-1). \\
+Prenons P(n) et mettons $\chi_n = (\chi_1+\dots+\chi_{n-1})/(n-1)$. On obtient donc : \\
+$\chi_1\dots\chi_{n-1}*\frac{\chi_1+\dots+\chi_{n-1}}{n-1} \leq (\frac{\chi_1+\dots+\chi_{n-1}}{n}+\frac{\chi_1+\dots+\chi_{n-1}}{n*(n-1)})^n = $ \\ 
+$\chi_1\dots\chi_{n-1}*\frac{\chi_1+\dots+\chi_{n-1}}{n-1} \leq (\frac{\chi_1+\dots+\chi_{n-1}}{n-1})^n = $
+$\chi_1\dots\chi_{n-1} \leq (\frac{\chi_1+\dots+\chi_{n-1}}{n-1})^{n-1}$ . Ce qui prouve que si P(n) est vraie alors P(n-1) l'est aussi. \\
+
+\noindent \textbf{question b}  Montrons que P(n) et P(2) implique P(2n). \\
+Si on suppose que P(n) est vraie alors \\ $\chi_1\dots\chi_n \leq (\frac{\chi_1+\dots+\chi_n}{n})^n$ et 
+$\chi_{n+1}\dots\chi_{2n} \leq (\frac{\chi_{n+1}+\dots+\chi_{2n}}{n})^n$ sont des vraies \\
+et que $\chi_1\dots\chi_{2n} \leq (\frac{\chi_1+\dots+\chi_n}{n})^n * (\frac{\chi_{n+1}+\dots+\chi_{2n}}{n})^n$ est vraie et si l'on montre que \\
+$(\frac{\chi_1+\dots+\chi_n}{n})^n * (\frac{\chi_{n+1}+\dots+\chi_{2n}}{n})^n \leq (\frac{\chi_1+\dots+\chi_{2n}}{2n})^{2n}$ on aura montré que P(2n) est vraie.\\ 
+Il est équivalent de montrer que $\frac{\chi_1+\dots+\chi_n}{n} * \frac{\chi_{n+1}+\dots+\chi_{2n}}{n} \leq (\frac{\chi_1+\dots+\chi_{2n}}{2n})^{2}$ (A) est vraie. \\ 
+P(2) étant vraie, le changement de variables $X_1 = \frac{\chi_1+\dots+\chi_n}{n}$ et $X_2 = \frac{\chi_{n+1}+\dots+\chi_{2n}}{n} $ démontre que A est vraie.
 \end{document}
